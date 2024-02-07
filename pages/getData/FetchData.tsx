@@ -3,30 +3,30 @@ import axios from 'axios';
 import {OPENAI_API_KEY} from './key';
 import OpenAI from 'openai';
 
-const openai = new OpenAI();
+// const openai = new OpenAI();
 
-export const FetchOpenai = async ( endpoint: string, setResPonse: () => void) => {
-  const options = {
-    method: 'POST',
-    url: `https://api.openai.com/v1/chat/completions`,
-    headers: {
-      Authorization: Bearer OPENAI_API_KEY,
-    },
+// export const FetchOpenai = async ( endpoint: string, setResPonse: () => void) => {
+//   const options = {
+//     method: 'POST',
+//     url: `https://api.openai.com/v1/chat/completions`,
+//     headers: {
+//       Authorization: Bearer OPENAI_API_KEY,
+//     },
 
-    messages: [{role: 'system', content: endpoint}],
-    model: 'gpt-3.5-turbo',
-  };
+//     messages: [{role: 'system', content: endpoint}],
+//     model: 'gpt-3.5-turbo',
+//   };
 
-  try {
-    const completion = await openai.chat.completions.create(options);
-    console.log(completion.choices[0]);
-    setResPonse(completion.choices[0]);
-  } catch (error) {
-    console.error(error);
-  }
-};
+//   try {
+//     const completion = await openai.chat.completions.create(options);
+//     console.log(completion.choices[0]);
+//     setResPonse(completion.choices[0]);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
 
-FetchOpenai();
+// FetchOpenai();
 
 // export const FetchData = async (name, endpoint, setResPonse) => {
 

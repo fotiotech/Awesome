@@ -9,6 +9,7 @@ import React, {useState} from 'react';
 import {FetchData} from './getData/FetchData';
 import {FetchOpenai} from './getData/FetchData';
 import Video from 'react-native-video';
+
 import {
   ImageBackground,
   ScrollView,
@@ -22,13 +23,15 @@ import {
   Image,
 } from 'react-native';
 
+
+
 export default function Home({navigation}) {
   const [result, setResult] = useState('');
 
   // console.log(result);
 
   // FetchData('series', 'tt0903747', setResult);
-  FetchOpenai('You are a helpful assistant.', setResult);
+  // FetchOpenai('You are a helpful assistant.', setResult);
 
   return (
     <SafeAreaView style={styles.container}>

@@ -1,17 +1,64 @@
 import React, {useState} from 'react';
+import {firebase} from '@react-native-firebase/auth';
+import {firebaseConfig} from './api/Api';
 import {StyleSheet, Button, View, TextInput, Text} from 'react-native';
 
+firebase.initializeApp(firebaseConfig);
+
 const Signup = ({navigation}) => {
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+
+  function SignupHandler() {
+    var auth = firebase.auth();
+
+    var newData = {
+      name: name,
+      email: email,
+      password: password,
+    };
+
+    var ref = auth.ref('users/signup');
+
+    ref.push(newData, error => {
+      if (error) {
+        console.log('data could not be saved.' + error);
+      } else {
+        console.log('data saved successfully.');
+      }
+    });
+  }
+
   return (
     <View style={styles.login}>
-      <Text style={styles.login1}>Sign Up{'\n'}</Text>
+      <Text style={styles.login1}>Sign Up</Text>
       <Text style={styles.textspace}>Name :</Text>
-      <TextInput placeholder="name" style={styles.input} />
+      <TextInput
+        onChange={e => setName(e.target.value)}
+        placeholder="name"
+        style={styles.input}
+      />
       <Text style={styles.textspace}>Email :</Text>
-      <TextInput placeholder="Email" style={styles.input} />
+      <TextInput
+        onChange={e => setEmail(e.target.value)}
+        placeholder="Email"
+        style={styles.input}
+      />
       <Text style={styles.textspace}>Password :</Text>
-      <TextInput placeholder="Password" style={styles.input} />
-      <Button title="Send" style={styles.submit} />
+      <TextInput
+        onChange={e => setPassword(e.target.value)}
+        placeholder="Password"
+        style={styles.input}
+      />
+      <Button
+        title="Send"
+        onPress={
+          () => SignupHandler
+          // navigation.navigate('Login');
+        }
+        style={styles.submit}
+      />
       <Text style={styles.haveaccount}>Already have an account? </Text>
       <Text title="Log in" onPress={() => navigation.navigate('Login')}>
         Log In
