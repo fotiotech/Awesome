@@ -52,7 +52,7 @@ import OpenAI from 'openai';
 //   method: 'GET',
 //   url: `https://moviesdatabase.p.rapidapi.com/titles/${name}/${endpoint}`,
 //   headers: {
-//     'X-RapidAPI-Key': 'dba71c29a5mshc4b6785b20a5cc1p1588c9jsn3742fb477d7d',
+//     'X-RapidAPI-Key': ,
 //     'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com',
 //   },
 // };
@@ -92,7 +92,7 @@ import OpenAI from 'openai';
 //     method: 'GET',
 //     url: `https://movies-api14.p.rapidapi.com/${endpoint}`,
 //     headers: {
-//       'X-RapidAPI-Key': 'dba71c29a5mshc4b6785b20a5cc1p1588c9jsn3742fb477d7d',
+//       'X-RapidAPI-Key': ,
 //       'X-RapidAPI-Host': 'movies-api14.p.rapidapi.com',
 //     },
 //   };
