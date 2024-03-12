@@ -75,7 +75,7 @@ import OpenAI from 'openai';
 //   headers: {
 //     'content-type': 'application/x-www-form-urlencoded',
 //     'Accept-Encoding': 'application/gzip',
-//     'X-RapidAPI-Key': 'dba71c29a5mshc4b6785b20a5cc1p1588c9jsn3742fb477d7d',
+//     'X-RapidAPI-Key': ,
 //     'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
 //   },
 //   data: encodedParams,
