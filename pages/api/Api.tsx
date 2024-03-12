@@ -2,7 +2,7 @@
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyCQFpLpE4dNhBxb3QmVc9OdtjahISIoI1M',
+  apiKey: '',
   authDomain: 'fotiodb.firebaseapp.com',
   projectId: 'fotiodb',
   storageBucket: 'fotiodb.appspot.com',
